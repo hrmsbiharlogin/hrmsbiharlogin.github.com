@@ -535,6 +535,114 @@ td strong{color:var(--red-dark)}
   .steps li::before{min-width:28px;height:28px;font-size:13px}
   .faq-q{font-size:14px;padding:14px 16px}
 }
+
+/* ==========================================
+   COMPREHENSIVE MOBILE FIX
+========================================== */
+
+/* Base — prevent horizontal scroll on all screens */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* All containers max width on mobile */
+@media(max-width:480px) {
+  .wrap, .wrap-lg { padding: 0 14px; }
+
+  /* Hero */
+  .hero { padding: 28px 16px 24px; }
+  .hero h1 { font-size: 20px; line-height: 1.3; }
+  .hero-sub { font-size: 14px; }
+  .hero-meta { gap: 8px; font-size: 11.5px; }
+  .hero-cta { font-size: 13px; padding: 10px 16px; width: 100%; justify-content: center; }
+
+  /* Quick answer */
+  .quick-answer { padding: 16px; }
+  .qa-title { font-size: 15px; }
+  .quick-answer p { font-size: 14px; }
+  .qa-link { width: 100%; justify-content: center; }
+
+  /* Stat cards — 2 column on mobile */
+  .stat-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .stat-num { font-size: 20px; }
+  .stat-label { font-size: 11px; }
+
+  /* Headings */
+  h2 { font-size: 16px; padding: 10px 12px; margin: 28px 0 10px; }
+  h3 { font-size: 14.5px; }
+  p { font-size: 14.5px; }
+
+  /* Steps */
+  .steps li { padding: 10px 12px; gap: 10px; font-size: 14px; }
+  .steps li::before { min-width: 26px; height: 26px; font-size: 12px; }
+
+  /* Tables — scrollable */
+  .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  table { min-width: 500px; font-size: 13px; }
+  th, td { padding: 9px 10px; }
+
+  /* Boxes */
+  .box { padding: 12px 14px; font-size: 13.5px; }
+
+  /* FAQ */
+  .faq-q { font-size: 13.5px; padding: 13px 14px; }
+  .faq-a { padding: 0 14px 13px; font-size: 13.5px; }
+  .faq-icon { min-width: 22px; height: 22px; font-size: 16px; }
+
+  /* Hindi section */
+  .hindi-section { padding: 16px; }
+  .hindi-text { font-size: 14.5px; }
+
+  /* External links */
+  .ext-links { padding: 14px; }
+  .ext-link-item { font-size: 13px; gap: 8px; }
+
+  /* Sidebar widgets — stack properly */
+  .sidebar-sticky { position: static; }
+  .widget { padding: 14px; }
+
+  /* Images */
+  .img-box img { border-radius: 8px; }
+
+  /* Footer */
+  .footer-grid { grid-template-columns: 1fr; gap: 20px; }
+  .footer-bottom-links { gap: 5px 12px; }
+  .footer-disclaimer { font-size: 11.5px; }
+
+  /* Back to top */
+  #backTop { bottom: 16px; right: 16px; width: 38px; height: 38px; font-size: 17px; }
+
+  /* TOC */
+  .toc-widget { padding: 14px; }
+  .toc-list a { font-size: 13px; padding: 8px 4px; }
+}
+
+/* Medium mobile 481px - 600px */
+@media(min-width:481px) and (max-width:600px) {
+  .hero h1 { font-size: 22px; }
+  .stat-grid { grid-template-columns: 1fr 1fr; }
+  .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  table { min-width: 500px; }
+  .faq-q { font-size: 14px; }
+  .footer-grid { grid-template-columns: 1fr; }
+}
+
+/* Tablet 601px - 860px */
+@media(min-width:601px) and (max-width:860px) {
+  .stat-grid { grid-template-columns: repeat(4, 1fr); }
+  .table-wrap { overflow-x: auto; }
+  table { min-width: 520px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* Fix sidebar on all mobile */
+@media(max-width:860px) {
+  .main-layout { grid-template-columns: 1fr; gap: 24px; padding: 20px 0 40px; }
+  .sidebar { position: static; }
+  #toc-mobile { display: block !important; }
+}
+
 </style>
 </head>
 <body>
