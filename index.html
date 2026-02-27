@@ -63,7 +63,7 @@ strong{font-weight:600}
    LAYOUT
 ========================================== */
 .wrap{max-width:900px;margin:0 auto;padding:0 20px}
-.wrap-lg{max-width:1140px;margin:0 auto;padding:0 24px}
+.wrap-lg{max-width:1140px;margin:0 auto;padding:0 24px;box-sizing:border-box;}
 
 /* ==========================================
    HEADER
@@ -301,7 +301,9 @@ nav.main-nav a:hover{background:rgba(255,255,255,.15);color:#fff;text-decoration
 }
 .article-body p{
   font-size:15.5px;line-height:1.78;color:var(--txt);
-  margin-bottom:16px
+  margin-bottom:16px;
+  word-break:break-word;
+  overflow-wrap:break-word;
 }
 .article-body ul{
   padding-left:0;margin:12px 0 18px;list-style:none
@@ -544,6 +546,18 @@ td strong{color:var(--red-dark)}
 html, body {
   overflow-x: hidden;
   width: 100%;
+  max-width: 100%;
+}
+
+/* CRITICAL FIX — every element stays inside screen */
+* {
+  max-width: 100%;
+}
+
+img {
+  max-width: 100% !important;
+  height: auto !important;
+  display: block;
 }
 
 /* All containers max width on mobile */
@@ -643,6 +657,111 @@ html, body {
   #toc-mobile { display: block !important; }
 }
 
+/* ============================================
+   CRITICAL FIX — TEXT & IMAGE OVERFLOW
+   Fixes right side cut-off on all mobiles
+============================================ */
+@media(max-width:860px) {
+
+  /* Prevent ANY element from overflowing screen */
+  .wrap-lg,
+  .wrap,
+  .main-layout,
+  .main-content,
+  .article-body,
+  .sidebar,
+  .hero-inner,
+  .page-hero-inner,
+  .header-inner,
+  section,
+  main,
+  aside,
+  div,
+  p,
+  li,
+  td,
+  th {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Fix all text — no overflow */
+  p, li, td, th, h1, h2, h3, span, a {
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    white-space: normal !important;
+  }
+
+  /* Fix all images */
+  img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Fix wrap padding */
+  .wrap-lg { padding: 0 16px !important; }
+  .wrap { padding: 0 16px !important; }
+
+  /* Fix hero padding */
+  .hero { padding: 28px 16px 24px !important; }
+  .hero-inner { padding: 0 !important; }
+
+  /* Fix article content padding */
+  .article-body { padding: 0 !important; overflow: hidden; }
+
+  /* Fix tables — horizontal scroll only */
+  .table-wrap {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    width: 100% !important;
+  }
+  table {
+    min-width: 460px;
+    width: max-content;
+  }
+
+  /* Fix step list */
+  .steps li {
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* Fix boxes */
+  .box {
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* Fix quick answer */
+  .quick-answer {
+    padding: 16px !important;
+    word-break: break-word;
+  }
+
+  /* Fix TOC */
+  .toc-widget { padding: 14px !important; }
+  .toc-list a { white-space: normal !important; word-break: break-word !important; }
+
+  /* Fix Hindi section */
+  .hindi-section { padding: 16px !important; }
+
+  /* Fix FAQ */
+  .faq-q { padding: 13px 14px !important; word-break: break-word; }
+
+  /* Fix footer */
+  .site-footer .wrap-lg { padding: 0 16px !important; }
+  .footer-grid { grid-template-columns: 1fr !important; }
+  .footer-bottom-links { flex-wrap: wrap; }
+
+  /* Fix breadcrumb */
+  .breadcrumb-bar .wrap-lg { padding: 10px 16px !important; }
+
+  /* Fix external links */
+  .ext-link-item { flex-wrap: wrap; }
+  .ext-link-item a { word-break: break-all; }
+}
+
 </style>
 </head>
 <body>
@@ -678,13 +797,13 @@ html, body {
 =================================================== -->
 <section class="hero" aria-label="Page introduction">
   <div class="hero-inner">
-    <div class="hero-badge">📋 Updated Feb 2026</div>
+    <div class="hero-badge">📋 Updated June 2026</div>
     <h1>HRMS Bihar Login 2026 – Complete Guide to hrms.bihar.gov.in Portal</h1>
     <p class="hero-sub">Step-by-step guide for Bihar government employees — login, salary slip download, password reset, teacher login, service book, and HRMS 2.0. In English &amp; Hindi.</p>
     <div class="hero-meta">
       <span>🕐 10 min read</span>
       <span>✍️ Bihar Govt Services Guide</span>
-      <span>🔄 Last Updated: Feb 2026</span>
+      <span>🔄 Last Updated: June 2026</span>
     </div>
     <a href="https://hrms.bihar.gov.in" rel="nofollow noopener" target="_blank" class="hero-cta">
       🔗 Open Official HRMS Portal
