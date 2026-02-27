@@ -330,8 +330,10 @@ nav.main-nav a:hover{background:rgba(255,255,255,.15);color:#fff;text-decoration
   background:#fff;border:1px solid var(--border);
   border-radius:var(--r);padding:14px 16px;
   box-shadow:var(--shadow-sm);
-  font-size:15px;line-height:1.65;color:var(--txt);
-  transition:border-color .18s
+  font-size:15px;line-height:1.75;color:var(--txt);
+  transition:border-color .18s;
+  word-break:break-word;
+  overflow-wrap:break-word;
 }
 .steps li:hover{border-color:var(--red-border)}
 .steps li::before{
@@ -339,7 +341,25 @@ nav.main-nav a:hover{background:rgba(255,255,255,.15);color:#fff;text-decoration
   min-width:32px;height:32px;
   background:var(--red);color:#fff;
   font-weight:700;font-size:14px;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;flex-shrink:0
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  margin-top:2px;
+}
+
+/* MOBILE STEPS FIX — vertical layout */
+@media(max-width:600px){
+  .steps{margin:12px 0 16px}
+  .steps li{
+    flex-direction:column;
+    gap:8px;
+    padding:14px 16px;
+    align-items:flex-start;
+  }
+  .steps li::before{
+    min-width:30px;height:30px;
+    font-size:13px;
+    margin-top:0;
+    margin-bottom:2px;
+  }
 }
 
 /* ==========================================
