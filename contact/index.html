@@ -3,15 +3,44 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Us – HRMS Bihar Login Guide</title>
-<meta name="description" content="Contact HRMS Bihar Login Guide. Independent informational website. For official HRMS Bihar support call 0612-2217601 or email hrmshelp-bih@nic.in.">
+
+<!-- CHANGE 1: Title rewritten — removes "HRMS Bihar Login Guide" keyword phrase -->
+<title>Contact – HRMS Bihar Helpline 0612-2217601 | hrmsbiharlogin.github.io</title>
+
+<!-- CHANGE 2: Description rewritten — no keyword-rich phrases, signals utility page -->
+<meta name="description" content="Contact page for hrmsbiharlogin.github.io — an independent guide. For official HRMS Bihar portal support call 0612-2217601 or email hrmshelp-bih@nic.in.">
+
+<!-- CHANGE 3: robots stays index,follow (kept as requested) — but schema below signals ContactPage type -->
 <meta name="robots" content="index, follow">
+
 <link rel="canonical" href="https://hrmsbiharlogin.github.io/contact/">
+
+<!-- CHANGE 4: ContactPage schema — explicitly tells Google this is a contact utility page, not content -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact – HRMS Bihar Login Guide",
+  "url": "https://hrmsbiharlogin.github.io/contact/",
+  "description": "Contact page for the independent HRMS Bihar Login informational guide.",
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "HRMS Bihar Login Guide",
+    "url": "https://hrmsbiharlogin.github.io/",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "areaServed": "IN",
+      "availableLanguage": ["English", "Hindi"]
+    }
+  }
+}
+</script>
+
 <link rel="icon" type="image/png" sizes="512x512" href="../favicon.png">
 <link rel="shortcut icon" href="../favicon.png">
 <link rel="apple-touch-icon" href="../favicon.png">
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -58,7 +87,6 @@ nav.main-nav a:hover{background:rgba(255,255,255,.15);color:#fff;text-decoration
 /* CONTACT GRID */
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:24px 0}
 @media(max-width:640px){.contact-grid{grid-template-columns:1fr}}
-
 .contact-card{background:#fff;border:1px solid #e5e5ea;border-radius:12px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.06);transition:border-color .2s}
 .contact-card:hover{border-color:#c4a0a0}
 .contact-card.official{background:#fdf0f0;border:2px solid #8a1e1e}
@@ -140,7 +168,12 @@ p{font-size:15px;line-height:1.78;color:#1c1c1e;margin-bottom:14px;word-break:br
 <!-- BREADCRUMB -->
 <div class="breadcrumb-bar">
   <div class="wrap-lg">
-    <nav class="breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Contact Us</li></ol></nav>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li aria-current="page">Contact Us</li>
+      </ol>
+    </nav>
   </div>
 </div>
 
@@ -154,7 +187,7 @@ p{font-size:15px;line-height:1.78;color:#1c1c1e;margin-bottom:14px;word-break:br
     <p style="margin-bottom:0">For all official HRMS Bihar portal problems, contact the <strong>Government of Bihar helpdesk directly</strong> — details below.</p>
   </div>
 
-  <!-- CONTACT CARDS -->
+  <!-- OFFICIAL SUPPORT -->
   <h2>Official HRMS Bihar Support</h2>
   <p>For any issue with the HRMS Bihar portal — login problems, salary slip, password reset, service book — contact the official government helpdesk:</p>
 
@@ -217,7 +250,7 @@ p{font-size:15px;line-height:1.78;color:#1c1c1e;margin-bottom:14px;word-break:br
     </div>
   </div>
 
-  <!-- ABOUT THIS WEBSITE CONTACT -->
+  <!-- ABOUT THIS WEBSITE -->
   <h2>Contact This Website</h2>
   <p>For queries <strong>specifically about this informational website</strong> — content errors, suggestions, or feedback — you can reach us. We are a small independent team and respond within 3–5 working days.</p>
 
@@ -237,7 +270,7 @@ p{font-size:15px;line-height:1.78;color:#1c1c1e;margin-bottom:14px;word-break:br
     <a href="/about/" class="ql-item"><span class="ql-icon">📋</span> About This Website</a>
     <a href="/disclaimer/" class="ql-item"><span class="ql-icon">⚖️</span> Disclaimer</a>
     <a href="/privacy-policy/" class="ql-item"><span class="ql-icon">🔒</span> Privacy Policy</a>
-    <a href="/terms/" class="ql-item"><span class="ql-icon">📜</span> Terms & Conditions</a>
+    <a href="/terms/" class="ql-item"><span class="ql-icon">📜</span> Terms &amp; Conditions</a>
   </div>
 
 </div>
